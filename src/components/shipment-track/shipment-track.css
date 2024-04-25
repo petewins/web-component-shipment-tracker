@@ -1,0 +1,72 @@
+:host {
+  display: block;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+.fieldInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.09);
+  border-radius: 20px;
+  padding: 0.8rem 1.2rem;
+}
+.fieldInput .form-input {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  font-size: 1em;
+  color: #6a7c92;
+}
+.fieldInput .form-input:focus {
+  outline: none;
+}
+.fieldInput .form-submit {
+  font-size: 1em;
+  font-weight: 800;
+  color: #6a7c92;
+  border-radius: 17px;
+  border: none;
+  background: none;
+  box-shadow: 5px -2px 81px 1px rgba(0, 0, 0, 0.09);
+  cursor: pointer;
+}
+
+p.error {
+  font-size: 1em;
+  padding: 1rem 0.4rem;
+  margin: 0;
+}
+
+.icon-wrapper {
+  padding-inline: 1rem;
+}
+
+.loader {
+  width: 1em;
+  height: 1em;
+  border-width: 2px;
+  border-style: solid;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Remove autofill background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+}

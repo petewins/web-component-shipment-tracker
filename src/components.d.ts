@@ -6,56 +6,40 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface ShipmentTrack {
+        "background": string;
+        "color": string;
+        "errorcolor": string;
+        "errormessage": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLShipmentTrackElement extends Components.ShipmentTrack, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLShipmentTrackElement: {
+        prototype: HTMLShipmentTrackElement;
+        new (): HTMLShipmentTrackElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "shipment-track": HTMLShipmentTrackElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface ShipmentTrack {
+        "background"?: string;
+        "color"?: string;
+        "errorcolor"?: string;
+        "errormessage"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "shipment-track": ShipmentTrack;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "shipment-track": LocalJSX.ShipmentTrack & JSXBase.HTMLAttributes<HTMLShipmentTrackElement>;
         }
     }
 }
